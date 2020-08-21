@@ -1,23 +1,14 @@
-public class PayrollHourly extends PayrollEmployee {
-
+public class PayrollHourly extends PayrollEmployee{
 
     private int hoursWorked;
     private double hourlyRate = 20.00;
 
-
-    public PayrollHourly(int employeeId, String firstName, String lastName) {
-        super(employeeId, firstName, lastName);
+    public PayrollHourly(int employeeId, String firstName, String lastName, double paycheckTotal, int hoursWorked) {
+        super(employeeId, firstName, lastName, paycheckTotal);
+        this.hoursWorked = hoursWorked;
     }
 
     public int getHoursWorked() {
         return hoursWorked;
-    }
-
-    public void setHoursWorked(int hoursWorked) {
-        this.hoursWorked = hoursWorked;
-    }
-
-    public double getHourlyRate() {
-        return hourlyRate;
     }
 }

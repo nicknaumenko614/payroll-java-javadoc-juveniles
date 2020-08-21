@@ -1,17 +1,16 @@
-public class PayrollEmployee {
+public abstract class PayrollEmployee {
 
-    private int employeeId;
-    private String firstName;
-    private String lastName;
-    private double paycheckTotal;
+    protected int employeeId;
+    protected String firstName;
+    protected String lastName;
+    protected double paycheckTotal;
 
-
-    public PayrollEmployee(int employeeId, String firstName, String lastName) {
+    public PayrollEmployee(int employeeId, String firstName, String lastName, double paycheckTotal) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.paycheckTotal = paycheckTotal;
     }
-
 
     public int getEmployeeId() {
         return employeeId;

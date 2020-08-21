@@ -1,29 +1,25 @@
-public class PayrollSales extends PayrollEmployee implements Bonus {
+public class PayrollSales extends PayrollEmployee implements BonusPayable {
+
+    private double salesComission;
+    private double payPeriodEarnings;
 
 
-    private double payPeriodEarnings = 3000.00;
-    private double salesCommission;
-
-
-    public PayrollSales(int employeeId, String firstName, String lastName) {
-        super(employeeId, firstName, lastName);
+    public PayrollSales(int employeeId, String firstName, String lastName, double paycheckTotal, double salesComission, double payPeriodEarnings) {
+        super(employeeId, firstName, lastName, paycheckTotal);
+        this.salesComission = salesComission;
+        this.payPeriodEarnings = payPeriodEarnings;
     }
 
-    public double getSalesCommission() {
-        return salesCommission;
-    }
-
-    public void setSalesCommission(double salesCommission) {
-        this.salesCommission = salesCommission;
+    public double getSalesComission() {
+        return salesComission;
     }
 
     public double getPayPeriodEarnings() {
         return payPeriodEarnings;
     }
 
-
     @Override
-    public double receiveBonus(double bonus) {
-        return bonus;
+    public void payBonus() {
+
     }
 }
